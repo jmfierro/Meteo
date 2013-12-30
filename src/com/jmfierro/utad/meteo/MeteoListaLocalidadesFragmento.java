@@ -96,6 +96,9 @@ public class MeteoListaLocalidadesFragmento extends ListFragment {
 	public void onListItemClick(ListView listView, View view, int posicion, long id) {
 		super.onListItemClick(listView, view, posicion, id);		
 		//mCallbacks.onEntradaSelecionada(Lista_contenido.ENTRADAS_LISTA.get(posicion).id);
+		listView.setSelected(true);
+		listView.setItemChecked(posicion, true);
+	
 		mCallbacks.onItemSeleccionado(Integer.toString(posicion));
 	}
 	
